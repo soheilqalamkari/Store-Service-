@@ -1,6 +1,8 @@
 package com.nds.storemodule.Dao.Repository;
 
-import com.northwind.basemodule.Model.Product;
+
+
+import com.nds.storemodule.Model.Product;
 
 import java.util.List;
 

@@ -1,7 +1,8 @@
 package com.nds.storemodule.Dao.RepositoryImpl;
 
-import com.northwind.basemodule.Dao.Repository.SupplierRepository;
-import com.northwind.basemodule.Model.Supplier;
+
+import com.nds.storemodule.Dao.Repository.SupplierRepository;
+import com.nds.storemodule.Model.Supplier;
 import org.springframework.stereotype.Repository;
 
 import javax.persistence.EntityManager;

@@ -1,7 +1,7 @@
 package com.nds.storemodule.Service.RepositoryService;
 
 
-import com.northwind.basemodule.Model.Product;
+import com.nds.storemodule.Model.Product;
 
 import java.util.List;
 

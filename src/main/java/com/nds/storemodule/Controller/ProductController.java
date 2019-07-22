@@ -1,8 +1,8 @@
 package com.nds.storemodule.Controller;
 
-import com.northwind.basemodule.Exception.ResourceNotFoundException;
-import com.northwind.basemodule.Model.Product;
-import com.northwind.basemodule.Service.RepositoryService.ProductService;
+import com.nds.storemodule.Exception.ResourceNotFoundException;
+import com.nds.storemodule.Model.Product;
+import com.nds.storemodule.Service.RepositoryService.ProductService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
@@ -20,7 +20,7 @@ public class ProductController {
     private ProductService productService;
 
     @GetMapping(value = "/all",produces = MediaType.APPLICATION_JSON_VALUE)
-    public ResponseEntity<List<Product>> getAll() throws ResourceNotFoundException{
+    public ResponseEntity<List<Product>> getAll() throws ResourceNotFoundException {
 
         List<Product> productList;
         productList = productService.findAll();

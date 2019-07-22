@@ -19,13 +19,13 @@ public class Product implements Serializable {
     private Supplier supplier;
     private Category category;
     private Long supplierId;
-    private Long categoryId;
+    private Integer categoryId;
 
     public Product() {
         super();
     }
 
-    public Product(Long productId, String productName, String quantityPerUnit, Long unitPrice, Integer unitsInStock, Integer unitsOnOrder, Integer reorderLevel, Integer discontinued, Supplier supplier, Category category, Long supplierId, Long categoryId) {
+    public Product(Long productId, String productName, String quantityPerUnit, Long unitPrice, Integer unitsInStock, Integer unitsOnOrder, Integer reorderLevel, Integer discontinued, Supplier supplier, Category category, Long supplierId, Integer categoryId) {
         this.productId = productId;
         this.productName = productName;
         this.quantityPerUnit = quantityPerUnit;
@@ -147,11 +147,11 @@ public class Product implements Serializable {
     }
 
     @Transient
-    public Long getCategoryId() {
+    public Integer getCategoryId() {
         return categoryId;
     }
 
-    public void setCategoryId(Long categoryId) {
+    public void setCategoryId(Integer categoryId) {
         this.categoryId = categoryId;
     }
 }

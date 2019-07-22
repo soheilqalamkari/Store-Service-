@@ -1,8 +1,8 @@
 package com.nds.storemodule.Service.RepositoryServiceImpl;
 
-import com.northwind.basemodule.Dao.Repository.ProductRepository;
-import com.northwind.basemodule.Model.Product;
-import com.northwind.basemodule.Service.RepositoryService.ProductService;
+import com.nds.storemodule.Dao.Repository.ProductRepository;
+import com.nds.storemodule.Model.Product;
+import com.nds.storemodule.Service.RepositoryService.ProductService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

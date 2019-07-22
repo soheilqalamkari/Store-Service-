@@ -1,11 +1,12 @@
 package com.nds.storemodule.Dao.RepositoryImpl;
 
-import com.northwind.basemodule.Dao.Repository.CategoryRepository;
-import com.northwind.basemodule.Dao.Repository.ProductRepository;
-import com.northwind.basemodule.Dao.Repository.SupplierRepository;
-import com.northwind.basemodule.Model.Category;
-import com.northwind.basemodule.Model.Product;
-import com.northwind.basemodule.Model.Supplier;
+
+import com.nds.storemodule.Dao.Repository.CategoryRepository;
+import com.nds.storemodule.Dao.Repository.ProductRepository;
+import com.nds.storemodule.Dao.Repository.SupplierRepository;
+import com.nds.storemodule.Model.Category;
+import com.nds.storemodule.Model.Product;
+import com.nds.storemodule.Model.Supplier;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
