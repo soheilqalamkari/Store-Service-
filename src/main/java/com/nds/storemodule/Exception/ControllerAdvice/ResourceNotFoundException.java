@@ -1,4 +1,4 @@
-package com.nds.storemodule.Exception;
+package com.nds.storemodule.Exception.ControllerAdvice;
 
 
 import org.springframework.http.HttpStatus;
@@ -11,6 +11,7 @@ public class ResourceNotFoundException extends Exception {
     public ResourceNotFoundException(String message){
         super(message);
     }
+
 
 
 }

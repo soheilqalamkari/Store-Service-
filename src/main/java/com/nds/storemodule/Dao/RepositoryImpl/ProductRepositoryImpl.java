@@ -9,6 +9,7 @@ import com.nds.storemodule.Model.Product;
 import com.nds.storemodule.Model.Supplier;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
+import org.springframework.transaction.annotation.Transactional;
 
 import javax.persistence.EntityManager;
 import javax.persistence.NoResultException;
@@ -17,6 +18,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 @Repository
+@Transactional
 public class ProductRepositoryImpl implements ProductRepository {
 
 

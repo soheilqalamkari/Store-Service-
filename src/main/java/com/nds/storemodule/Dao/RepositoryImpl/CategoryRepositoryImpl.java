@@ -5,6 +5,7 @@ import com.nds.storemodule.Dao.Repository.CategoryRepository;
 import com.nds.storemodule.Model.Category;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
+import org.springframework.transaction.annotation.Transactional;
 
 import javax.persistence.EntityManager;
 import javax.persistence.NoResultException;
@@ -13,10 +14,9 @@ import java.util.ArrayList;
 import java.util.List;
 
 @Repository
+@Transactional
 public class CategoryRepositoryImpl implements CategoryRepository {
 
-    @Autowired
-    private CategoryRepository categoryRepository;
 
     @PersistenceContext
     private EntityManager entityManager;

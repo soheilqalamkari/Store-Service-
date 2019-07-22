@@ -1,4 +1,4 @@
-package com.nds.storemodule.Exception;
+package com.nds.storemodule.Exception.ErrorFormat;
 
 import java.util.Date;
 

@@ -1,5 +1,7 @@
 package com.nds.storemodule.Model;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import javax.persistence.*;
 import java.io.Serializable;
 
@@ -16,13 +18,14 @@ public class Product implements Serializable {
     private Integer unitsOnOrder;
     private Integer reorderLevel;
     private Integer discontinued;
+    @JsonIgnore
     private Supplier supplier;
+    @JsonIgnore
     private Category category;
     private Long supplierId;
     private Integer categoryId;
 
     public Product() {
-        super();
     }
 
     public Product(Long productId, String productName, String quantityPerUnit, Long unitPrice, Integer unitsInStock, Integer unitsOnOrder, Integer reorderLevel, Integer discontinued, Supplier supplier, Category category, Long supplierId, Integer categoryId) {
@@ -42,7 +45,7 @@ public class Product implements Serializable {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "product_id",nullable = false)
+    @Column(name = "product_id")
     public Long getProductId() {
         return productId;
     }
