@@ -58,7 +58,7 @@ public class GuaranteeRepositoryImpl implements GuaranteeRepository{
         try {
             entityManager.persist(guarantee);
             return 1;
-        }catch (Exception e)
+        }catch (Exception e){
             return 0;
         }
     }
