@@ -7,7 +7,6 @@ import java.io.Serializable;
 @Table(name = "guarantees")
 public class Guarantee implements Serializable {
 
-
     private Integer guaranteeId;
     private String guaranteeName;
     private String description;

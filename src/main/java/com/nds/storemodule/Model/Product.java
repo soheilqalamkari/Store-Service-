@@ -22,13 +22,16 @@ public class Product implements Serializable {
     private Supplier supplier;
     @JsonIgnore
     private Category category;
+    @JsonIgnore
+    private Guarantee guarantee;
+    private Integer guaranteeId;
     private Long supplierId;
     private Integer categoryId;
 
     public Product() {
     }
 
-    public Product(Long productId, String productName, String quantityPerUnit, Long unitPrice, Integer unitsInStock, Integer unitsOnOrder, Integer reorderLevel, Integer discontinued, Supplier supplier, Category category, Long supplierId, Integer categoryId) {
+    public Product(Long productId, String productName, String quantityPerUnit, Long unitPrice, Integer unitsInStock, Integer unitsOnOrder, Integer reorderLevel, Integer discontinued, Supplier supplier, Category category, Guarantee guarantee, Long supplierId, Integer categoryId) {
         this.productId = productId;
         this.productName = productName;
         this.quantityPerUnit = quantityPerUnit;
@@ -39,6 +42,7 @@ public class Product implements Serializable {
         this.discontinued = discontinued;
         this.supplier = supplier;
         this.category = category;
+        this.guarantee = guarantee;
         this.supplierId = supplierId;
         this.categoryId = categoryId;
     }
@@ -156,5 +160,24 @@ public class Product implements Serializable {
 
     public void setCategoryId(Integer categoryId) {
         this.categoryId = categoryId;
+    }
+
+    @Transient
+    public Integer getGuaranteeId() {
+        return guaranteeId;
+    }
+
+    public void setGuaranteeId(Integer guaranteeId) {
+        this.guaranteeId = guaranteeId;
+    }
+
+    @ManyToOne(fetch = FetchType.LAZY,cascade = CascadeType.PERSIST)
+    @JoinColumn(name = "guarantee_id")
+    public Guarantee getGuarantee() {
+        return guarantee;
+    }
+
+    public void setGuarantee(Guarantee guarantee) {
+        this.guarantee = guarantee;
     }
 }
