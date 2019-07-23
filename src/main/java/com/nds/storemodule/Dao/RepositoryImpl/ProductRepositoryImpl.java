@@ -2,9 +2,11 @@ package com.nds.storemodule.Dao.RepositoryImpl;
 
 
 import com.nds.storemodule.Dao.Repository.CategoryRepository;
+import com.nds.storemodule.Dao.Repository.GuaranteeRepository;
 import com.nds.storemodule.Dao.Repository.ProductRepository;
 import com.nds.storemodule.Dao.Repository.SupplierRepository;
 import com.nds.storemodule.Model.Category;
+import com.nds.storemodule.Model.Guarantee;
 import com.nds.storemodule.Model.Product;
 import com.nds.storemodule.Model.Supplier;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -28,6 +30,8 @@ public class ProductRepositoryImpl implements ProductRepository {
     private SupplierRepository supplierRepository;
     @Autowired
     private CategoryRepository categoryRepository;
+    @Autowired
+    private GuaranteeRepository guaranteeRepository;
 
 
     @Override
@@ -58,6 +62,7 @@ public class ProductRepositoryImpl implements ProductRepository {
             Product productObj = findById(product.getProductId());
             Category category = categoryRepository.findById(product.getCategoryId());
             Supplier supplier = supplierRepository.findById(product.getSupplierId());
+            Guarantee guarantee = guaranteeRepository.findById(product.getGuaranteeId());
             productObj.setProductName(product.getProductName());
             productObj.setDiscontinued(product.getDiscontinued());
             productObj.setQuantityPerUnit(product.getQuantityPerUnit());
@@ -66,6 +71,7 @@ public class ProductRepositoryImpl implements ProductRepository {
             productObj.setUnitsOnOrder(product.getUnitsOnOrder());
             productObj.setCategory(category);
             productObj.setSupplier(supplier);
+            productObj.setGuarantee(guarantee);
             entityManager.merge(productObj);
             return 1;
         }catch (Exception e){
