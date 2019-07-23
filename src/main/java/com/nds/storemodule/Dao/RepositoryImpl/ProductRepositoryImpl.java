@@ -1,6 +1,5 @@
 package com.nds.storemodule.Dao.RepositoryImpl;
 
-
 import com.nds.storemodule.Dao.Repository.CategoryRepository;
 import com.nds.storemodule.Dao.Repository.GuaranteeRepository;
 import com.nds.storemodule.Dao.Repository.ProductRepository;
@@ -12,7 +11,6 @@ import com.nds.storemodule.Model.Supplier;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
-
 import javax.persistence.EntityManager;
 import javax.persistence.NoResultException;
 import javax.persistence.PersistenceContext;
